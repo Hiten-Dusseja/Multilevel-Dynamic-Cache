@@ -167,6 +167,7 @@ int main()
         cout<<"3. put"<<endl;  
         cout<<"4. Remove Cache Level"<<endl;
         cout<<"5. Display Cache"<<endl;
+        cout<<"6. Exit"<<endl;
         cin>>choice;
         if(choice == 1)
         {
@@ -263,6 +264,14 @@ int main()
                 ListOfCache[i]->show();
             }
         }    
+        else if(choice == 6)
+        {
+            cout<<"Exiting...";
+            for (Cache* cache : ListOfCache) {
+                delete cache;
+            }
+            exit(0);
+        }
     }
     for (Cache* cache : ListOfCache) {
         delete cache;
